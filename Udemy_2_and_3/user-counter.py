@@ -10,7 +10,7 @@ log4jLogger = sc._jvm.org.apache.log4j
 logging = log4jLogger.LogManager.getLogger('*** BERTLOG')
 print('*** About to start UsersHistogram')
 
-lines = sc.textFile("file:///Udemy_2_and_3/ml-100k/u.data")
+lines = sc.textFile("file:///sparkdata/ml-100k/u.data")
 ratings = lines.map(lambda x: x.split()[0])
 result = ratings.countByValue()
 

@@ -16,6 +16,7 @@ services:
     volumes:
       - "../Udemy_2_and_3:/Udemy_2_and_3:rw"
       - "../Udemy_4:/Udemy_4:rw"
+      - "../data:/sparkdata:rw"
 
 #  spark-worker-1:
 #    image: docker.io/bitnami/spark:3

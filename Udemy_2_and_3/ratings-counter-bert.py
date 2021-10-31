@@ -9,7 +9,7 @@ log4jLogger = sc._jvm.org.apache.log4j
 logging = log4jLogger.LogManager.getLogger('*** BERTLOG')
 logging.warn('About to start')
 
-lines = sc.textFile("file:///Udemy_2_and_3/ml-100k/u.data")
+lines = sc.textFile("file:///sparkdata/ml-100k/u.data")
 ratings = lines.map(lambda x: x.split()[2])
 result = ratings.countByValue()
 logging.warn('Result for CountByValue')
